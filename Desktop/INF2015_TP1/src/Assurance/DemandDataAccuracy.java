@@ -2,7 +2,11 @@ package Assurance;
 
 public class DemandDataAccuracy {
     
+    //TODO : Changer pour mettre qu'un return
     public boolean IsMontantAccurate(String montant){
+        //The price must have the following format : x.xx$
+        if(montant.length() < 5)
+            return false;
         if (!montant.endsWith("$"))
             return false;
         return true;

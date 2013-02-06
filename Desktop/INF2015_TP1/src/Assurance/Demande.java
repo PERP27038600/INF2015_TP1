@@ -1,17 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package Assurance;
 
-import XmlStream.XmlWriter;
-import javax.xml.parsers.ParserConfigurationException;
-import org.w3c.dom.Element;
-
-/**
- *
- * @author Admin
- */
 public class Demande {
     private String soin;
     private String date;
@@ -33,11 +21,11 @@ public class Demande {
     }
         
     public double getPriceToDouble() {
-        //The price must have the following format : x.xx$
         int period = price.indexOf(".");
         double unit = Double.parseDouble(price.substring(0, period));
         double fraction = Double.parseDouble(price.substring(period, price.length() - 1));
         fraction /= 100;
+        //TODO : Ajout exception double max
         return unit + fraction;
     }
       

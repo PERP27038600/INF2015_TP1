@@ -2,10 +2,11 @@ package Assurance;
 
 import java.util.ArrayList;
 
+//TODO : Changer pour un return seulement
 public class AssuranceDataAccuracy {
     public boolean IsClientDataAccurate(String client){
         final int CLIENT_NBR_DIGITS = 6;
-        if(!(client.length() == CLIENT_NBR_DIGITS))
+        if(client.length() != CLIENT_NBR_DIGITS)
             return false;
         return IsNumeric(client);   
     }

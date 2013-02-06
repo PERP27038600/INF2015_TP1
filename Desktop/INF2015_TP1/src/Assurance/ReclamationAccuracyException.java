@@ -1,8 +1,7 @@
 package Assurance;
 
 public class ReclamationAccuracyException extends Exception{
-    @Override
-    public String toString(){
-        return "Données invalides";
+    ReclamationAccuracyException(){
+        super("Données invalides");
     }
 }

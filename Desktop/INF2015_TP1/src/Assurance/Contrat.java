@@ -39,14 +39,26 @@ public class Contrat {
     }
     
     private void ContratB(){
-        if(soin == 0 || soin == 300 ||(soin >= 300 && soin < 400) || soin == 500)
+        if(soin == 0){
             pourcent = 50;
-        else if(soin == 200 || soin == 600)
+            maximum = 40.0;
+        }else if(soin == 100 || soin == 500){
+            pourcent = 50;
+            maximum = 50.0;
+        } else if(soin == 200){
+            maximum = 70.0;
             pourcent = 100;
-        else if(soin == 400)
+        } else if(soin >= 300 && soin < 400){
+            pourcent = 50;
+            maximum = Double.MAX_VALUE;
+        } else if(soin == 400){
+            maximum = 0;
             pourcent = 0;
-        else if(soin == 700)
+        } else if(soin == 700){
             pourcent = 70;
+        } else if (soin == 600){
+            pourcent = 100;
+        }
     }
             
     private void ContratC(){
@@ -73,9 +85,9 @@ public class Contrat {
     public double CalculeDiscount(double montant){
         double discoutPourcent = montant * pourcent / 100;
         if(discoutPourcent > maximum)
-            return montant - maximum;
+            return maximum;
         else 
-            return montant - discoutPourcent;
+            return discoutPourcent;
     }
     
 }

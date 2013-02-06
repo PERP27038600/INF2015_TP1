@@ -1,0 +1,57 @@
+<!--Ce fichier teste contrat A-->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reclamations>
+    <client>100023</client>
+    <contrat>A</contrat>
+    <mois>2013-01</mois>
+    <reclamation>
+        <soin>0</soin>
+        <date>2013-01-11</date>
+        <montant>100.00$</montant>
+    </reclamation>
+    <reclamation>
+        <soin>100</soin>
+        <date>2013-01-13</date>
+        <montant>100.00$</montant>
+    </reclamation>
+    <reclamation>
+        <soin>200</soin>
+        <date>2013-01-23</date>
+        <montant>100.00$</montant>
+    </reclamation>
+	    <reclamation>
+        <soin>300</soin>
+        <date>2013-01-11</date>
+        <montant>100.00$</montant>
+    </reclamation>
+    <reclamation>
+        <soin>350</soin>
+        <date>2013-01-13</date>
+        <montant>100.00$</montant>
+    </reclamation>
+    <reclamation>
+        <soin>399</soin>
+        <date>2013-01-23</date>
+        <montant>100.00$</montant>
+    </reclamation>
+	    <reclamation>
+        <soin>400</soin>
+        <date>2013-01-11</date>
+        <montant>100.00$</montant>
+    </reclamation>
+    <reclamation>
+        <soin>500</soin>
+        <date>2013-01-13</date>
+        <montant>100.00$</montant>
+    </reclamation>
+    <reclamation>
+        <soin>600</soin>
+        <date>2013-01-23</date>
+        <montant>100.00$</montant>
+    </reclamation>
+	    <reclamation>
+        <soin>700</soin>
+        <date>2013-01-23</date>
+        <montant>100.00$</montant>
+    </reclamation>
+</reclamations>

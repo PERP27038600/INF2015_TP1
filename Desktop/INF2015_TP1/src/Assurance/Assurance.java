@@ -52,7 +52,6 @@ public class Assurance {
         XmlWriter xmlOut = new XmlWriter();
         Element currentNode = xmlOut.CreateRoot("reclamations");
         xmlOut.CreateElement("client", client, currentNode);
-        xmlOut.CreateElement("contrat", contrat, currentNode);
         xmlOut.CreateElement("mois", month, currentNode);
         for (Demande demand : reclamations){
             Element subNode = xmlOut.CreateRoot("reclamation", currentNode);
@@ -63,6 +62,17 @@ public class Assurance {
         xmlOut.SaveDocumentToFile(filename);
     }
     
+    public void ErrorToXMLFile(String filename, String ErrorMessage){
+        try{
+        XmlWriter xmlOut = new XmlWriter();
+        Element currentNode = xmlOut.CreateRoot("reclamations");
+        xmlOut.CreateElement("message", ErrorMessage, currentNode);
+        xmlOut.SaveDocumentToFile(filename);
+        } catch (Exception e){
+            System.out.println("Unable to write the error message to XML file");
+        }
+    }
+
     @Override
     public String toString(){
         String reclamations = "";
